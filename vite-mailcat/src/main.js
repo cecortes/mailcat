@@ -5,7 +5,8 @@ document.querySelector("#app").innerHTML = `
   <div class="hero">
     
   </div>
-  <div>
+  <div class="bg-sky-500/10">
+    <h1 class="text-3xl text-blue-700 font-bold underline">Hello world!</h1>
     <h1>Get started</h1>
     <p>Edit <code>src/main.js</code> and save to test <code>HMR</code></p>
   </div>

@@ -44,3 +44,13 @@ Para mantener la consistencia y facilitar la lectura, cada nueva entrada en este
     - [x] Outline the styling guide reference.
 
 ---
+
+## 31-03-26 - Definición de Arquitectura Frontend y Actualización de Agent Skill
+
+- Establecimiento de la Arquitectura estricta MVC en Frontend y adaptación de skills de IA.
+  - [x] Creación del documento de arquitectura (`architecture.md`) con especificaciones de enrutamiento (SPA), almacenamiento exclusivo (LocalStorage) y convenciones CSS.
+  - [x] Definición del patrón arquitectónico en el documento, requiriendo 4 archivos clave por componente (Model, View, Controller, Factory).
+  - [x] Estandarización obligatoria del renderizado seguro mediante inyección de strings generados por `DOMParser`.
+  - [x] Actualización de la instrucción del agente (`.agents/skills/apply_mvc_pattern/SKILL.md`) para acatar estrictamente todas las nuevas capas arquitectónicas documentadas.
+
+---
