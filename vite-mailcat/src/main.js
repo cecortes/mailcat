@@ -1,17 +1,12 @@
-import './style.css'
-import javascriptLogo from './assets/javascript.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import { setupCounter } from './counter.js'
+import "./style.css";
 
-document.querySelector('#app').innerHTML = `
+document.querySelector("#app").innerHTML = `
 <section id="center">
   <div class="hero">
-    <img src="${heroImg}" class="base" width="170" height="179">
-    <img src="${javascriptLogo}" class="framework" alt="JavaScript logo"/>
-    <img src=${viteLogo} class="vite" alt="Vite logo" />
+    
   </div>
-  <div>
+  <div class="bg-sky-500/10">
+    <h1 class="text-3xl text-blue-700 font-bold underline">Hello world!</h1>
     <h1>Get started</h1>
     <p>Edit <code>src/main.js</code> and save to test <code>HMR</code></p>
   </div>
@@ -28,13 +23,11 @@ document.querySelector('#app').innerHTML = `
     <ul>
       <li>
         <a href="https://vite.dev/" target="_blank">
-          <img class="logo" src=${viteLogo} alt="" />
           Explore Vite
         </a>
       </li>
       <li>
         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-          <img class="button-icon" src="${javascriptLogo}" alt="">
           Learn more
         </a>
       </li>
@@ -55,6 +48,4 @@ document.querySelector('#app').innerHTML = `
 
 <div class="ticks"></div>
 <section id="spacer"></section>
-`
-
-setupCounter(document.querySelector('#counter'))
+`;

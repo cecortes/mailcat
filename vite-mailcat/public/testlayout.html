@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MailCat AI | Professional Synthesis</title>
+
+    <link href="teststyle.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-container": "#00331d",
+              surface: "#131313",
+              "inverse-surface": "#e5e2e1",
+              "on-tertiary-container": "#2b2c2b",
+              "surface-container": "#201f1f",
+              "on-tertiary": "#303130",
+              tertiary: "#c7c6c4",
+              "surface-tint": "#59de9b",
+              "primary-fixed": "#78fbb6",
+              "secondary-container": "#2e4f4f",
+              "error-container": "#93000a",
+              "on-secondary-container": "#9cbfbf",
+              "on-secondary-fixed": "#002020",
+              "on-surface-variant": "#bccabe",
+              "on-tertiary-fixed-variant": "#464746",
+              "tertiary-fixed-dim": "#c7c6c4",
+              "on-secondary-fixed-variant": "#2b4c4c",
+              "secondary-fixed": "#c6e9e9",
+              "outline-variant": "#3d4a41",
+              "tertiary-container": "#939391",
+              "surface-container-highest": "#353534",
+              secondary: "#aacdcd",
+              background: "#131313",
+              "surface-container-low": "#1c1b1b",
+              "on-error-container": "#ffdad6",
+              "inverse-on-surface": "#313030",
+              "on-primary-fixed": "#002111",
+              "tertiary-fixed": "#e3e2e0",
+              "surface-variant": "#353534",
+              error: "#ffb4ab",
+              primary: "#59de9b",
+              "secondary-fixed-dim": "#aacdcd",
+              outline: "#869489",
+              "on-tertiary-fixed": "#1b1c1b",
+              "on-primary-fixed-variant": "#005232",
+              "on-primary": "#003921",
+              "surface-container-high": "#2a2a2a",
+              "on-surface": "#e5e2e1",
+              "on-secondary": "#133536",
+              "inverse-primary": "#006d43",
+              "surface-bright": "#393939",
+              "surface-dim": "#131313",
+              "surface-container-lowest": "#0e0e0e",
+              "on-background": "#e5e2e1",
+              "on-error": "#690005",
+              "primary-fixed-dim": "#59de9b",
+              "primary-container": "#00a86b",
+            },
+            fontFamily: {
+              headline: ["Inter"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              "2xl": "1rem",
+              "3xl": "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-surface text-on-surface antialiased overflow-hidden">
+    <div class="flex h-screen overflow-hidden">
+      <!-- Sidebar -->
+      <aside
+        class="h-full w-64 bg-surface-container-lowest border-r border-outline-variant/15 flex flex-col p-4 gap-2 z-50 font-['Inter'] antialiased tracking-tight"
+      >
+        <div class="mb-8 px-2 flex items-center gap-3">
+          <div
+            class="w-8 h-8 rounded bg-primary flex items-center justify-center"
+          >
+            <span
+              class="material-symbols-outlined text-on-primary text-xl"
+              data-icon="auto_awesome"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >auto_awesome</span
+            >
+          </div>
+          <div>
+            <h1 class="text-xl font-bold tracking-tighter text-primary">
+              MailCat AI
+            </h1>
+            <p
+              class="text-[10px] uppercase tracking-widest text-on-surface-variant opacity-60"
+            >
+              Pro Synthesis
+            </p>
+          </div>
+        </div>
+        <nav class="flex-1 space-y-1">
+          <a
+            class="text-primary font-semibold flex items-center gap-3 px-4 py-3 bg-surface-container border border-outline-variant/10 rounded-lg transition-transform active:scale-[0.98]"
+            href="#"
+          >
+            <span class="material-symbols-outlined" data-icon="dashboard"
+              >dashboard</span
+            >
+            Principal
+          </a>
+          <a
+            class="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 transition-all duration-200 hover:bg-surface-container-low rounded-lg"
+            href="#"
+          >
+            <span class="material-symbols-outlined" data-icon="edit_square"
+              >edit_square</span
+            >
+            Borradores
+          </a>
+          <a
+            class="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 transition-all duration-200 hover:bg-surface-container-low rounded-lg"
+            href="#"
+          >
+            <span class="material-symbols-outlined" data-icon="insights"
+              >insights</span
+            >
+            Estadísticas
+          </a>
+          <a
+            class="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 transition-all duration-200 hover:bg-surface-container-low rounded-lg"
+            href="#"
+          >
+            <span class="material-symbols-outlined" data-icon="settings"
+              >settings</span
+            >
+            Configuración
+          </a>
+        </nav>
+        <button
+          class="mt-4 w-full gradient-primary text-on-primary font-bold py-3 flex items-center justify-center gap-2 shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity rounded-full"
+        >
+          <span class="material-symbols-outlined text-sm" data-icon="add"
+            >add</span
+          >
+          New Draft
+        </button>
+        <div class="mt-auto pt-4 border-t border-outline-variant/15 space-y-1">
+          <a
+            class="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 transition-all duration-200 hover:bg-surface-container-low rounded-lg"
+            href="#"
+          >
+            <span class="material-symbols-outlined" data-icon="dark_mode"
+              >dark_mode</span
+            >
+            Theme
+          </a>
+          <a
+            class="text-on-surface-variant hover:text-on-surface flex items-center gap-3 px-4 py-3 transition-all duration-200 hover:bg-surface-container-low rounded-lg"
+            href="#"
+          >
+            <span class="material-symbols-outlined" data-icon="help_outline"
+              >help_outline</span
+            >
+            Support
+          </a>
+          <div
+            class="mt-4 p-3 bg-surface-container border border-outline-variant/10 flex items-center gap-3 rounded-full"
+          >
+            <img
+              alt="User profile avatar"
+              class="w-8 h-8 rounded-full border border-outline-variant/30"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5GkmlpWQuDSVPM06AtnXzCV2XffSt6BEsoQhV417298nGjjFyuLT0c2gpRsAqfKt4xf8g2doVMYeVGRIRs6WNnvhZnI-jZzM7gqAdLiKN5Fawb6a6nBhOiFXV-4hC591gedXHqWvfJQTKujEwlXySiGmRm4Tpchbsr3H4PaH4vPh07lW6AmppCKhrYpij9P6aolTT2nyMunfXdWmYHaoUXow8qIepeVYr5dBswVJb1bL5NmbOm9IBJqCOsP_PX0jfWGLd8odCqDo"
+            />
+            <div class="overflow-hidden">
+              <p class="text-sm font-bold truncate text-on-surface">
+                Alex Sterling
+              </p>
+              <p class="text-[10px] text-on-surface-variant truncate">
+                alex@mailcat.ai
+              </p>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="flex-1 flex flex-col min-w-0">
+        <!-- Main Content -->
+        <main
+          class="flex-1 overflow-y-auto bg-surface hide-scrollbar custom-scrollbar px-10 pb-10 pt-6"
+        >
+          <div class="max-w-6xl mx-auto flex flex-col gap-6">
+            <!-- Fila 1 -->
+            <div class="w-full">
+              <div class="col-span-12 text-left mb-8">
+                <h2
+                  class="text-[3.5rem] font-extrabold tracking-tight leading-tight text-on-surface mb-2 text-center"
+                >
+                  Domina tu <span class="text-[#59de9b]">comunicación</span>.
+                </h2>
+                <p class="text-on-surface-variant text-lg leading-relaxed">
+                  MailCat AI transforma tus notas rápidas en correos
+                  electrónicos corporativos impecables con el poder de la
+                  síntesis profesional.
+                </p>
+              </div>
+            </div>
+
+            <!-- Fila 2 -->
+            <div class="w-full grid grid-cols-12 gap-6 items-start mb-2">
+              <!-- Left Column -->
+              <div class="col-span-12 lg:col-span-7 space-y-6">
+                <div
+                  class="bg-surface-container-low rounded-3xl p-6 border border-outline-variant/10 shadow-sm"
+                >
+                  <div class="flex items-center justify-between mb-4">
+                    <label
+                      class="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
+                      >Input Draft</label
+                    >
+                    <span class="text-[10px] text-on-surface-variant/50"
+                      >42 words / 238 chars</span
+                    >
+                  </div>
+                  <textarea
+                    class="w-full bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-on-surface-variant/20 resize-none font-body leading-relaxed text-lg h-[124px]"
+                    placeholder="Paste your quick notes, a messy draft, or key points here..."
+                  ></textarea>
+                  <div
+                    class="flex items-center gap-3 mt-4 pt-4 border-t border-outline-variant/10"
+                  >
+                    <button
+                      class="text-on-surface-variant hover:text-primary transition-colors"
+                    >
+                      <span
+                        class="material-symbols-outlined"
+                        data-icon="attach_file"
+                        >attach_file</span
+                      >
+                    </button>
+                    <button
+                      class="text-on-surface-variant hover:text-primary transition-colors"
+                    >
+                      <span class="material-symbols-outlined" data-icon="mic"
+                        >mic</span
+                      >
+                    </button>
+                    <div class="flex-1"></div>
+                    <button
+                      class="text-on-surface-variant text-sm hover:underline"
+                    >
+                      Clear all
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column -->
+              <div class="col-span-12 lg:col-span-5 flex flex-col gap-6">
+                <button
+                  class="w-full gradient-primary text-on-primary font-extrabold text-xl rounded-3xl flex items-center justify-center gap-3 shadow-2xl shadow-primary/20 transition-all hover:scale-[1.01] active:scale-[0.99] group h-[60px]"
+                >
+                  <span
+                    class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform"
+                    data-icon="auto_fix_high"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >auto_fix_high</span
+                  >
+                  Optimizar con IA
+                </button>
+                <!-- Moved Tone Parameter here -->
+                <div
+                  class="bg-surface-container-low rounded-3xl p-6 border border-outline-variant/10 shadow-sm"
+                >
+                  <label
+                    class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-6"
+                    >Synthesis Parameter: Tone</label
+                  >
+                  <div class="flex flex-wrap gap-2">
+                    <button
+                      class="px-6 py-2.5 rounded-full bg-primary text-on-primary font-semibold text-sm transition-all shadow-lg shadow-primary/10"
+                    >
+                      Formal
+                    </button>
+                    <button
+                      class="px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all border border-outline-variant/10 text-sm"
+                    >
+                      Amable
+                    </button>
+                    <button
+                      class="px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all border border-outline-variant/10 text-sm"
+                    >
+                      Urgente
+                    </button>
+                    <button
+                      class="px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all border border-outline-variant/10 text-sm"
+                    >
+                      Persuasivo
+                    </button>
+                    <button
+                      class="px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all border border-outline-variant/10 text-sm"
+                    >
+                      Conciso
+                    </button>
+                    <button
+                      class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all border border-outline-variant/10"
+                    >
+                      <span
+                        class="material-symbols-outlined text-sm"
+                        data-icon="more_horiz"
+                        >more_horiz</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fila 3 -->
+            <div class="w-full">
+              <div
+                class="glass-panel border border-primary/10 rounded-[2rem] overflow-hidden flex flex-col shadow-sm"
+              >
+                <div
+                  class="p-4 border-b border-outline-variant/10 flex items-center justify-between"
+                >
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="w-2 h-2 rounded-full bg-primary animate-pulse"
+                    ></div>
+                    <span
+                      class="text-xs font-bold uppercase tracking-widest text-primary"
+                      >Synthesis Result</span
+                    >
+                  </div>
+                  <div class="flex gap-2">
+                    <button
+                      class="p-1.5 rounded-lg hover:bg-surface-container-highest text-on-surface-variant transition-colors"
+                      title="Copy to clipboard"
+                    >
+                      <span
+                        class="material-symbols-outlined text-base"
+                        data-icon="content_copy"
+                        >content_copy</span
+                      >
+                    </button>
+                    <button
+                      class="p-1.5 rounded-lg hover:bg-surface-container-highest text-on-surface-variant transition-colors"
+                      title="Export PDF"
+                    >
+                      <span
+                        class="material-symbols-outlined text-base"
+                        data-icon="picture_as_pdf"
+                        >picture_as_pdf</span
+                      >
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="p-6 space-y-3 font-body text-on-surface leading-relaxed relative min-h-[180px]"
+                >
+                  <div class="space-y-3 opacity-10">
+                    <div
+                      class="h-3 bg-on-surface-variant/40 rounded-full w-3/4"
+                    ></div>
+                    <div
+                      class="h-3 bg-on-surface-variant/40 rounded-full w-full"
+                    ></div>
+                    <div
+                      class="h-3 bg-on-surface-variant/40 rounded-full w-5/6"
+                    ></div>
+                  </div>
+                  <div
+                    class="absolute inset-0 flex flex-col items-center justify-center text-center p-4 pointer-events-none"
+                  >
+                    <div
+                      class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center mb-3 border border-outline-variant/10 shadow-sm"
+                    >
+                      <span
+                        class="material-symbols-outlined text-primary text-2xl"
+                        data-icon="mail"
+                        style="font-variation-settings: &quot;FILL&quot; 1"
+                        >mail</span
+                      >
+                    </div>
+                    <h4 class="font-bold text-on-surface text-sm mb-0.5">
+                      Ready for synthesis
+                    </h4>
+                    <p
+                      class="text-[11px] text-on-surface-variant max-w-[200px]"
+                    >
+                      Professional translation will appear here.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="p-3 bg-surface-container-low flex items-center justify-between border-t border-outline-variant/10"
+                >
+                  <div class="flex items-center gap-2">
+                    <img
+                      class="w-8 h-8 rounded-lg object-cover grayscale opacity-50"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmlfmz05wOq02XFOTy4A51TdLstHKmhOCH1eu6nnGsM_wdJQfjwwqR9Zn8VxpZOn8y2--_x8znKEE8fEplWItSCKTzKt-PcVL4v05jNOVZALJqmq-CXc3gVG1wJNJENVPnEeBD8zOznV0mfkJD6Q_QqkvuwR0TW_VPRAEo0hz9VtHlv4SOUlVRxA3UdzRLklDGIAmy97e_LZHXQh1FvwcKWn1eTU8tXR0_02_uwwb6F0aJnc2VxuAL0-5CTUtf0Al2ot6QDKYtrig"
+                    />
+                    <div
+                      class="text-[9px] leading-tight text-on-surface-variant"
+                    >
+                      <p class="font-bold">ENGINE STATUS</p>
+                      <p class="text-primary uppercase font-black">Optimal</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-0.5">
+                    <span
+                      class="material-symbols-outlined text-[10px] text-on-surface-variant"
+                      data-icon="star"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[10px] text-on-surface-variant"
+                      data-icon="star"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[10px] text-on-surface-variant"
+                      data-icon="star"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[10px] text-on-surface-variant"
+                      data-icon="star"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    <span
+                      class="material-symbols-outlined text-[10px] text-on-surface-variant"
+                      data-icon="star_half"
+                      >star_half</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
